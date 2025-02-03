@@ -1,0 +1,19 @@
+vector<vector<int>> tokenizeArray(vector<int>& arr, int q) {
+    vector<vector<int>> tokens;
+    vector<int> current;
+
+    for (int num : arr) {
+        if (num > q) {
+            if (!current.empty()) {
+                tokens.push_back(current);
+                current.clear();
+            }
+        } else {
+            current.push_back(num);
+        }
+    }
+    if (!current.empty()) {
+        tokens.push_back(current);
+    }
+    return tokens;
+}
