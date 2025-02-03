@@ -1,0 +1,5 @@
+long long countSubarrays(int n, int k) {
+    if (k > n) return 0; 
+    return 1LL * (n - k + 1) * (n - k + 2) / 2;
+}
+
