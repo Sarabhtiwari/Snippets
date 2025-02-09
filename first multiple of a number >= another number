@@ -1,0 +1,4 @@
+int f(int l, int r, int num) {
+    int firstMultiple = ((l + num - 1) / num) * num;
+    return (firstMultiple <= r) ? firstMultiple : -1;
+}
