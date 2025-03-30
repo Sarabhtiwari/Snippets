@@ -1,0 +1,55 @@
+string bin = bitset<8>(num).to_string();
+bin = bin.substr(bin.find('1')); // Remove leading zeros
+
+
+int decimal = stoi("1010", nullptr, 2);  // Converts "1010" to decimal 10
+long long decimal = stoll("1101", nullptr, 2);  // For large numbers
+
+
+string hexStr = to_string(num);  // Convert to string first
+stringstream ss;
+ss << hex << num;  // Convert to hex
+string hexValue = ss.str();
+
+
+stringstream ss;
+ss << oct << num;  // Convert to octal
+string octalValue = ss.str();
+
+
+int decimal = stoi("1A", nullptr, 16);  // Converts hex "1A" to decimal 26
+int decimal = stoi("12", nullptr, 8);   // Converts octal "12" to decimal 10
+
+
+int count = __builtin_popcount(num);  // Counts the number of 1s in `num` (32-bit)
+
+
+int count = __builtin_popcountll(num);  // For long long (64-bit)
+
+int count = __builtin_clz(num);  // Counts leading zeros in 32-bit number
+
+int count = __builtin_clzll(num);  // For long long (64-bit)
+
+int count = __builtin_ctz(num);  // Counts trailing zeros in 32-bit number
+
+int count = __builtin_ctzll(num);  // For long long (64-bit)
+
+int parity = __builtin_parity(num);  // Returns 1 if odd number of 1s, else 0
+
+int parity = __builtin_parityll(num);  // For long long (64-bit)
+
+num ^= (1 << k); //to toggle kth bit
+
+int lowestPowerOf2 = num & -num;//rightmost set bit
+
+num = num & (num - 1); // unset rightmost bit
+
+bool isPowerOf2 = (num && !(num & (num - 1)));// check if number is power of 2
+
+int highestPower = 1 << (31 - __builtin_clz(n)); // highest power of 2 less than n
+
+int log2n = 31 - __builtin_clz(n); //log2n
+
+
+
+
